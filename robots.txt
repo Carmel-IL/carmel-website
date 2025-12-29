@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carmel-hadbarot.co.il/sitemap.xml
