@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  hanging-punctuation: first last;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+a,
+a:visited,
+button,
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  text-decoration: none;
+
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+ul,
+ol,
+menu,
+nav {
+  list-style: none;
+}
+
+img,
+picture,
+svg,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg polygon,
+svg path,
+svg rect,
+svg line {
+  fill: inherit;
+  stroke: inherit;
+}
