@@ -14,14 +14,14 @@
     to bottom,
     #f8fcff,
     #fafeffd6 63%,
-    #d9d9d900 0%
+    #d9d9d900 100%
   );
 
   --color-background-gradient-up: linear-gradient(
     to top,
-    #313c2fc9,
-    #656d6485 52%,
-    #c9c9c900 0%
+    #313c2fc9 8%,
+    #656d6485 30%,
+    #c9c9c900 55%
   );
 
   /* Typography */
@@ -57,4 +57,57 @@
   src: url("../fonts/Assistant-ExtraBold.woff2") format("woff2"),
     url("../fonts/Assistant-ExtraBold.woff") format("woff"),
     url("../fonts/Assistant-ExtraBold.eot") format("eot");
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-size: 8rem;
+  text-align: center;
+}
+
+/* ============ */
+/* Hero Section */
+/* ============ */
+
+.hero {
+  height: 100svh;
+
+  background-image: var(--color-background-gradient-down),
+    url("../images/hero-main-desktop.avif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-layer-group {
+  height: 100%;
+  position: relative;
+}
+
+.hero-layer--heading {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.hero-layer--background {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--color-background-gradient-up),
+    url("../images/hero-main-cut-desktop.webp");
+
+  background-size: cover;
+  background-position: center;
+
+  pointer-events: none;
 }
