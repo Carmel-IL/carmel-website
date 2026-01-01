@@ -9,7 +9,7 @@
   --color-light-3: #efedd2;
 
   /* Gradient Colors */
-  --color-primary-gradient: linear-gradient(45deg, #4f6c40, #89b573);
+  --color-primary-gradient: linear-gradient(to left, #4f6c40, #89b573);
   --color-background-gradient-down: linear-gradient(
     to bottom,
     #f8fcff,
@@ -59,6 +59,45 @@
     url("../fonts/Assistant-ExtraBold.eot") format("eot");
 }
 
+/* ========== */
+/* Components */
+/* ========== */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 1em;
+  display: inline-block;
+
+  margin-left: 0.25em;
+  vertical-align: -0.15em;
+}
+
+.btn-primary {
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  color: var(--color-light-1);
+
+  background-image: var(--color-primary-gradient);
+  border-radius: var(--border-radius);
+  border: none;
+
+  box-shadow: 0 0 3rem var(--color-primary-2);
+}
+
+/* ====== */
+/* Global */
+/* ====== */
+
 body {
   font-family: var(--font-family);
 }
@@ -84,7 +123,13 @@ h1 {
 
 .hero-layer-group {
   height: 100%;
-  position: relative;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
 }
 
 .hero-layer--heading {
