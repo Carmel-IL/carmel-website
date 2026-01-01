@@ -7,7 +7,6 @@
 }
 
 html {
-  hanging-punctuation: first last;
   text-size-adjust: 100%;
 }
 
@@ -34,7 +33,6 @@ input[type="submit"] {
   cursor: pointer;
   text-decoration: none;
 
-  color: inherit;
   background: none;
   border: none;
 }
@@ -48,7 +46,6 @@ nav {
 
 img,
 picture,
-svg,
 video,
 svg {
   max-width: 100%;
@@ -60,6 +57,6 @@ svg polygon,
 svg path,
 svg rect,
 svg line {
-  fill: inherit;
-  stroke: inherit;
+  fill: currentColor;
+  stroke: currentColor;
 }
