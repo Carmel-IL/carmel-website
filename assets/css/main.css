@@ -70,7 +70,8 @@
   text-align: center;
   text-decoration: none;
 
-  cursor: pointer;
+  border-radius: var(--border-radius);
+  border: none;
 }
 
 .btn-icon {
@@ -86,12 +87,17 @@
   font-weight: 800;
 
   color: var(--color-light-1);
-
   background-image: var(--color-primary-gradient);
-  border-radius: var(--border-radius);
-  border: none;
 
   box-shadow: 0 0 3rem var(--color-primary-2);
+}
+
+.btn-secondary {
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  color: var(--color-light-1);
+  background-color: var(--color-primary-2);
 }
 
 /* ====== */
