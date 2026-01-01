@@ -162,3 +162,56 @@ h1 {
 
   pointer-events: none;
 }
+
+.hero-btn-features-group {
+  width: 100%;
+
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero-features-group {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  color: var(--color-light-3);
+}
+
+.hero-feature {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+
+  font-size: 1.25rem;
+  padding: 2rem;
+}
+
+.hero-feature-heading {
+  font-size: 1.25em;
+  margin-bottom: 0.2em;
+}
+
+.hero-feature-icon {
+  width: 1.35em;
+}
+
+#hero-feature-icon-check-tag {
+  width: 1.75em;
+}
+
+.hero-feature-separator {
+  width: 1em;
+  opacity: 0.5;
+}
