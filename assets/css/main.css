@@ -10,6 +10,7 @@
 
   /* Gradient Colors */
   --color-primary-gradient: linear-gradient(to left, #4f6c40, #89b573);
+  --color-primary-gradient-up: linear-gradient(to top, #4f6c40, #89b573);
   --color-background-gradient-down: linear-gradient(
     to bottom,
     #f8fcff,
@@ -111,6 +112,15 @@ body {
 h1 {
   font-size: 8rem;
   text-align: center;
+
+  background-image: var(--color-primary-gradient-up);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
 }
 
 /* ============ */
