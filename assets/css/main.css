@@ -110,7 +110,6 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
   text-align: center;
 
   background-image: var(--color-primary-gradient-up);
@@ -139,41 +138,24 @@ h1 {
 
 .hero-logo {
   width: 100%;
-  height: 20%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  padding: clamp(2rem, 5%, 4rem) 0 clamp(1rem, 5%, 1.5rem);
 }
 
 .hero-logo__img {
-  width: 6.5rem;
+  width: clamp(4.5rem, 10%, 6.5rem);
 }
 
-.hero-layer-group {
-  height: 100%;
-  width: 100%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  pointer-events: none;
+.hero-heading {
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  line-height: 1.1;
+  text-wrap: nowrap;
 }
 
-.hero-layer--heading {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-
-  transform: translateX(-50%);
-}
-
-.hero-layer--background {
+.hero-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -194,24 +176,25 @@ h1 {
   width: 100%;
 
   position: absolute;
-  bottom: 12%;
+  bottom: clamp(4rem, 10%, 8rem);
   left: 0;
 
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.25rem;
 }
 
 .hero-btn-group {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .hero-features-group {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: clamp(1.5rem, 2vw, 3.5em);
 
   color: var(--color-light-3);
 }
@@ -219,15 +202,16 @@ h1 {
 .hero-feature {
   display: flex;
   justify-content: center;
-  gap: 1.5em;
+  flex-wrap: wrap;
+  gap: 1.75rem;
 
-  font-size: 1.25rem;
-  padding: 2rem;
+  font-size: clamp(0.8rem, 2vw, 1.25rem);
+  padding: clamp(0.5rem, 2vw, 2rem);
 }
 
 .hero-feature-heading {
   font-size: 1.25em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.35rem;
 }
 
 .hero-feature-description {
@@ -245,4 +229,24 @@ h1 {
 .hero-feature-separator {
   width: 1em;
   opacity: 0.65;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: var(--color-background-gradient-down),
+      url("../images/hero-main-mobile.avif");
+
+    background-position-y: bottom;
+  }
+
+  .hero-heading {
+    text-wrap: balance;
+  }
+
+  .hero-background {
+    background-image: var(--color-background-gradient-up),
+      url("../images/hero-main-cut-mobile.webp");
+
+    background-position-y: bottom;
+  }
 }
