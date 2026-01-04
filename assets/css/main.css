@@ -31,6 +31,10 @@
 
   /* Shapes and Borders */
   --border-radius: 0.75rem;
+
+  /* Layout */
+  --wrapper-max: 75rem;
+  --wrapper-pad: clamp(2rem, 5vw, 12rem);
 }
 
 @font-face {
@@ -83,10 +87,13 @@
   vertical-align: -0.15em;
 }
 
-.btn-primary {
-  font-size: 1.5rem;
+.btn-primary,
+.btn-secondary {
+  font-size: 1.3em;
   font-weight: 800;
+}
 
+.btn-primary {
   color: var(--color-light-1);
   background-image: var(--color-primary-gradient);
 
@@ -94,9 +101,6 @@
 }
 
 .btn-secondary {
-  font-size: 1.5rem;
-  font-weight: 800;
-
   color: var(--color-light-1);
   background-color: var(--color-primary-2);
 }
@@ -120,6 +124,11 @@ h1 {
   background-clip: text;
 
   color: transparent;
+}
+
+.wrapper {
+  width: min(100% - (2 * var(--wrapper-pad)), var(--wrapper-max));
+  margin-inline: auto;
 }
 
 /* ============ */
@@ -150,9 +159,8 @@ h1 {
 }
 
 .hero-heading {
-  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-size: clamp(4rem, 11vw, 8.5rem);
   line-height: 1.1;
-  text-wrap: nowrap;
 }
 
 .hero-background {
@@ -173,15 +181,17 @@ h1 {
 }
 
 .hero-btn-features-group {
-  width: 100%;
+  width: min(100% - (2 * var(--wrapper-pad)), var(--wrapper-max));
+  margin-inline: auto;
 
   position: absolute;
-  bottom: clamp(4rem, 10%, 8rem);
-  left: 0;
+  bottom: clamp(2rem, 5vw, 12rem);
 
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
+
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .hero-btn-group {
@@ -194,41 +204,61 @@ h1 {
 .hero-features-group {
   display: flex;
   justify-content: center;
-  gap: clamp(1.5rem, 2vw, 3.5em);
+  align-items: flex-start;
+  gap: clamp(0.5rem, 2vw, 3.5em);
 
   color: var(--color-light-3);
 }
 
 .hero-feature {
   display: flex;
+  flex-basis: 33%;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.75rem;
+  gap: clamp(0.75em, 1.5vw, 1.75em);
 
-  font-size: clamp(0.8rem, 2vw, 1.25rem);
+  text-wrap: nowrap;
   padding: clamp(0.5rem, 2vw, 2rem);
 }
 
+.hero-feature--mobile {
+  display: none;
+}
+
 .hero-feature-heading {
-  font-size: 1.25em;
+  font-size: clamp(0.825em, 2vw, 1.25em);
   margin-bottom: 0.35rem;
 }
 
 .hero-feature-description {
+  font-size: clamp(0.9em, 2vw, 1em);
   opacity: 0.75;
 }
 
 .hero-feature-icon {
-  width: 1.35em;
+  width: clamp(1em, 2vw, 1.25em);
 }
 
 #hero-feature-icon-check-tag {
-  width: 1.75em;
+  width: clamp(1.25em, 2vw, 1.75em);
+}
+
+#hero-feature-icon-israel-ministry-of-environment {
+  width: clamp(2.65em, 2vw, 3.5em);
 }
 
 .hero-feature-separator {
   width: 1em;
   opacity: 0.65;
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-feature {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    text-wrap: balance;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -248,5 +278,19 @@ h1 {
       url("../images/hero-main-cut-mobile.webp");
 
     background-position-y: bottom;
+  }
+
+  .hero-feature--desktop {
+    display: none;
+  }
+
+  .hero-feature--mobile {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .hero-feature-description {
+    display: none;
   }
 }
