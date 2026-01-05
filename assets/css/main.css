@@ -42,6 +42,12 @@
   /* Layout */
   --wrapper-max: 75rem;
   --wrapper-pad: clamp(2rem, 5vw, 12rem);
+
+  /* Animations */
+  --animation-duration: 600ms;
+  --animation-delay: 200ms;
+  --animation-timing-funtion: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-fade-in: fade-in var(--animation-duration) ease-in-out backwards;
 }
 
 @font-face {
@@ -104,7 +110,7 @@
   color: var(--color-light-1);
   background-image: var(--color-primary-gradient);
 
-  box-shadow: 0 0 3rem var(--color-primary-2);
+  box-shadow: 0 0 clamp(1rem, 2vw, 3rem) var(--color-primary-2);
 }
 
 .btn-secondary {
@@ -162,7 +168,7 @@ h1 {
 }
 
 .hero-logo__img {
-  width: clamp(4rem, 10%, 6.5rem);
+  width: clamp(5rem, 10%, 6.5rem);
 }
 
 .hero-heading {
@@ -268,6 +274,36 @@ h1 {
 }
 
 /* Hero Section Animations */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero,
+.hero-logo,
+.hero-heading,
+.hero-btn-group,
+.hero-features-group {
+  animation: var(--animation-fade-in);
+}
+
+.hero-logo {
+  animation-delay: calc(var(--animation-delay) * 1);
+}
+.hero-heading {
+  animation-delay: calc(var(--animation-delay) * 2);
+}
+.hero-btn-group {
+  animation-delay: calc(var(--animation-delay) * 3);
+}
+.hero-features-group {
+  animation-delay: calc(var(--animation-delay) * 4);
+}
 
 /* Hero Section Responsiveness */
 
