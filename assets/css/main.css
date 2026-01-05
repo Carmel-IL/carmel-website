@@ -25,6 +25,13 @@
     #c9c9c900 55%
   );
 
+  --color-background-gradient-up-mobile: linear-gradient(
+    to top,
+    #313c2fc9 5%,
+    #656d646a 20%,
+    #c9c9c900 35%
+  );
+
   /* Typography */
   font-size: 100%;
   --font-family: "Assistant", sans-serif;
@@ -69,12 +76,14 @@
 /* ========== */
 
 .btn {
-  display: inline-block;
-  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
 
   text-align: center;
   text-decoration: none;
 
+  padding: clamp(0.6em, 2vw, 1rem) clamp(2em, 2vw, 3rem);
   border-radius: var(--border-radius);
   border: none;
 }
@@ -82,14 +91,12 @@
 .btn-icon {
   width: 1em;
   display: inline-block;
-
-  margin-left: 0.275em;
   vertical-align: -0.15em;
 }
 
 .btn-primary,
 .btn-secondary {
-  font-size: 1.3em;
+  font-size: 1.15em;
   font-weight: 800;
 }
 
@@ -155,11 +162,12 @@ h1 {
 }
 
 .hero-logo__img {
-  width: clamp(4.5rem, 10%, 6.5rem);
+  width: clamp(4rem, 10%, 6.5rem);
 }
 
 .hero-heading {
-  font-size: clamp(4rem, 11vw, 8.5rem);
+  font-size: clamp(2rem, 10vw, 8.5rem);
+  text-wrap: nowrap;
   line-height: 1.1;
 }
 
@@ -198,7 +206,15 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.hero-btn-group--mobile {
+  display: none;
+}
+
+.hero-btn-group--mobile .btn {
+  width: 100%;
 }
 
 .hero-features-group {
@@ -225,7 +241,7 @@ h1 {
 }
 
 .hero-feature-heading {
-  font-size: clamp(0.825em, 2vw, 1.25em);
+  font-size: clamp(0.85em, 2vw, 1.25em);
   margin-bottom: 0.35rem;
 }
 
@@ -251,6 +267,10 @@ h1 {
   opacity: 0.65;
 }
 
+/* Hero Section Animations */
+
+/* Hero Section Responsiveness */
+
 @media screen and (max-width: 1280px) {
   .hero-feature {
     flex-direction: column;
@@ -270,7 +290,7 @@ h1 {
   }
 
   .hero-heading {
-    text-wrap: balance;
+    margin-bottom: 0.8em;
   }
 
   .hero-background {
@@ -286,6 +306,22 @@ h1 {
 
   .hero-feature--mobile {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-btn-group--desktop {
+    display: none;
+  }
+  .hero-btn-group--mobile {
+    display: flex;
+  }
+
+  .hero-background {
+    background-image: var(--color-background-gradient-up-mobile),
+      url("../images/hero-main-cut-mobile.webp");
+
+    background-position-y: bottom;
   }
 }
 
