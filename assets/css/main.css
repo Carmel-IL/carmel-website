@@ -34,7 +34,7 @@
 
   /* Typography */
   font-size: 100%;
-  --font-family: "Assistant", sans-serif;
+  --font-family: 'Assistant', sans-serif;
 
   /* Shapes and Borders */
   --border-radius: 0.75rem;
@@ -51,30 +51,30 @@
 }
 
 @font-face {
-  font-family: "Assistant";
+  font-family: 'Assistant';
   font-weight: 400; /* Regular */
   font-style: normal;
-  src: url("../fonts/Assistant-Regular.woff2") format("woff2"),
-    url("../fonts/Assistant-Regular.woff") format("woff"),
-    url("../fonts/Assistant-Regular.eot") format("eot");
+  src: url('../fonts/Assistant-Regular.woff2') format('woff2'),
+    url('../fonts/Assistant-Regular.woff') format('woff'),
+    url('../fonts/Assistant-Regular.eot') format('eot');
 }
 
 @font-face {
-  font-family: "Assistant";
+  font-family: 'Assistant';
   font-weight: 600; /* Semi Bold */
   font-style: normal;
-  src: url("../fonts/Assistant-SemiBold.woff2") format("woff2"),
-    url("../fonts/Assistant-SemiBold.woff") format("woff"),
-    url("../fonts/Assistant-SemiBold.eot") format("eot");
+  src: url('../fonts/Assistant-SemiBold.woff2') format('woff2'),
+    url('../fonts/Assistant-SemiBold.woff') format('woff'),
+    url('../fonts/Assistant-SemiBold.eot') format('eot');
 }
 
 @font-face {
-  font-family: "Assistant";
+  font-family: 'Assistant';
   font-weight: 800; /* Extra Bold */
   font-style: normal;
-  src: url("../fonts/Assistant-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Assistant-ExtraBold.woff") format("woff"),
-    url("../fonts/Assistant-ExtraBold.eot") format("eot");
+  src: url('../fonts/Assistant-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Assistant-ExtraBold.woff') format('woff'),
+    url('../fonts/Assistant-ExtraBold.eot') format('eot');
 }
 
 /* ========== */
@@ -152,7 +152,7 @@ h1 {
   height: 100svh;
 
   background-image: var(--color-background-gradient-down),
-    url("../images/hero-main-desktop.avif");
+    url('../images/hero-main-desktop.avif');
 
   background-size: cover;
   background-position: center;
@@ -186,7 +186,7 @@ h1 {
   height: 100%;
 
   background-image: var(--color-background-gradient-up),
-    url("../images/hero-main-cut-desktop.webp");
+    url('../images/hero-main-cut-desktop.webp');
 
   background-size: cover;
   background-position: center;
@@ -320,7 +320,7 @@ h1 {
 @media screen and (max-width: 768px) {
   .hero {
     background-image: var(--color-background-gradient-down),
-      url("../images/hero-main-mobile.avif");
+      url('../images/hero-main-mobile.avif');
 
     background-position-y: bottom;
   }
@@ -331,7 +331,7 @@ h1 {
 
   .hero-background {
     background-image: var(--color-background-gradient-up),
-      url("../images/hero-main-cut-mobile.webp");
+      url('../images/hero-main-cut-mobile.webp');
 
     background-position-y: bottom;
   }
@@ -355,7 +355,7 @@ h1 {
 
   .hero-background {
     background-image: var(--color-background-gradient-up-mobile),
-      url("../images/hero-main-cut-mobile.webp");
+      url('../images/hero-main-cut-mobile.webp');
 
     background-position-y: bottom;
   }
